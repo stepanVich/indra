@@ -1,0 +1,65 @@
+{
+	"root": true,
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": [
+		"eslint:recommended",
+        "plugin:react/recommended",
+		"plugin:@typescript-eslint/eslint-recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:prettier/recommended",
+		"prettier"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+	"parser": "@typescript-eslint/parser",
+    "parserOptions": {
+		"ecmaVersion": 2020,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	},
+    "plugins": [
+		"react",
+		"@typescript-eslint",
+		"prettier"
+    ],
+    "rules": {
+		"prettier/prettier": "off",
+		"no-var": "warn",
+		"no-unused-vars": "off",
+		"react/jsx-uses-vars": "warn",
+		"react/display-name": "off",
+		"react/prop-types": "off",
+		"react/jsx-key": "warn",
+		"@typescript-eslint/no-unused-vars" : ["warn", { "vars": "all", "args": "after-used", "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }],
+		"prefer-const": "off",
+		"no-extra-semi": "off",
+		"@typescript-eslint/no-explicit-any": "off",
+		"@typescript-eslint/explicit-module-boundary-types": "off",
+		"@typescript-eslint/explicit-function-return-type": "off",
+		"@typescript-eslint/ban-types": "warn",
+		"@typescript-eslint/no-empty-function": "warn",
+		"@typescript-eslint/no-inferrable-types": "warn",
+		"@typescript-eslint/no-extra-semi": "warn",
+		"@typescript-eslint/no-non-null-assertion": "warn",
+		"@typescript-eslint/member-delimiter-style": "warn",
+		"@typescript-eslint/camelcase": "off",
+		"@typescript-eslint/no-use-before-define": "off",
+		"@typescript-eslint/type-annotation-spacing": "warn",
+		"@typescript-eslint/consistent-type-assertions": "warn",
+		"@typescript-eslint/no-empty-function": "off",
+		"@typescript-eslint/no-unused-vars": "off"
+    }
+}

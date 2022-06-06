@@ -1,0 +1,8 @@
+/src/app/indra/components/root.tsx
+/src/app/indra/services/fetch.ts
+/src/app/indra/dynamicContent.tsx
+/src/app/indra/components/grid.tsx
+/src/app/indra/components/table/filtered/*.tsx
+/src/app/indra/components/table/filtered/*.js
+/src/app/indra/components/root_old.tsx
+/src/app/indra/components/grids/old_virtualized/*.tsx

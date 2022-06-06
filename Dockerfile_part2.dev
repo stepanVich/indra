@@ -1,0 +1,40 @@
+####
+# This Dockerfile is used in order to build a container that runs the Quarkus application in JVM mode
+#
+# Before building the docker image run:
+#
+# mvn package
+#
+# Then, build the image with:
+#
+# docker build -f src/main/docker/Dockerfile.jvm -t quarkus/rest-json-quickstart-jvm .
+#
+# Then run the container using:
+#
+# docker run -i --rm -p 8080:8080 quarkus/rest-json-quickstart-jvm
+#
+# If you want to include the debug port into your docker image
+# you will have to expose the debug port (default 5005) like this :  EXPOSE 8080 5050
+# 
+# Then run the container using : 
+#
+# docker run -i --rm -p 8080:8080 -p 5005:5005 -e JAVA_ENABLE_DEBUG="true" quarkus/rest-json-quickstart-jvm
+#
+###
+# pull official base image
+FROM newetrlapp04.indra.es:443/prepared-react-front-15m
+
+# set working directory
+WORKDIR /app
+
+# add `/app/node_modules/.bin` to $PATH
+ENV PATH /node_modules/.bin:$PATH
+
+# Uses port which is used by the actual application
+EXPOSE 3000
+
+# add app
+COPY . ./
+
+# start app
+CMD ["npm", "start"]

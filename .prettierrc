@@ -1,0 +1,10 @@
+{
+  semi: true,
+  proseWrap: 'never',
+  printWidth: 120,
+  trailingComma: "none",
+  singleQuote: true,
+  tabWidth: 2,
+  bracketSpacing: false,
+  jsxBracketSameLine: true
+}
